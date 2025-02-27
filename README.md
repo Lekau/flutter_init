@@ -1,57 +1,78 @@
-Flint 🔥
+# Flint 🔥
 
-The ultimate CLI tool for Flutter indie devs
+A flexible CLI tool for Flutter component generation
 
-Flint is a command-line tool designed to help Flutter indie developers accelerate their development by generating pre-built code components like authentication pages, navigation setups, and UI templates. Think of it as your personal spark to get projects going faster! ⚡
+Flint helps Flutter developers accelerate their development by generating reusable UI components from templates. Quickly add buttons, cards, and other UI elements to your project without starting from scratch.
 
-🚀 Features
+## ✨ Current Features
 
-Quick Start Templates – Generate complete auth flows, onboarding screens, and more in seconds.
+- **Component Generation** – Easily add pre-designed UI components to your Flutter projects
+- **Multiple Component Types** – Currently supports:
+  - Buttons (`--button`)
+  - Cards (`--card`)
+- **Customizable Templates** – All generated components maintain a consistent structure with separate template and styles files
+- **Automatic File Naming** – Components are automatically named based on your input
 
-Customizable Components – Modify generated code to fit your project's needs.
-
-Scaffold Full Apps – Kickstart an entire Flutter project with pre-configured architecture.
-
-Best Practices – Uses industry-standard patterns to ensure clean and scalable code.
-
-📦 Installation
+## 📦 Installation
 
 You can install Flint globally using Dart:
 
-dart pub global activate flint
+```bash
+# From the flint directory
+dart pub global activate --source path .
+```
 
-Or using brew (coming soon):
+## 🔥 Usage
 
-brew install flint
+### Adding Components
 
-🔥 Usage
+To add a button component:
 
-Create a new project
+```bash
+flint add component --button login_button
+```
 
-flint new my_app
+To add a card component:
 
-Generate an authentication flow
+```bash
+flint add component --card user_profile
+```
 
-flint generate auth --provider firebase
+Each command will:
+1. Create a directory for your component in `lib/components/<component_name>/`
+2. Generate appropriate files based on the component type
+3. Replace placeholder names with your component name
 
-Add a new feature module
+### Getting Help
 
-flint generate feature chat
+```bash
+flint --help
+```
 
-List available templates
+## 🧩 Component Structure
 
-flint list
+Components are organized with a consistent structure:
 
-📖 Documentation
+- `<component_name>_template.dart` - The main component implementation
+- `<component_name>_styles.dart` - Styling constants for the component
+- `<component_name>_example.dart` - Example usage of the component
 
-Check out the full documentation here (coming soon) for advanced usage, customization, and integrations.
+## 🛠️ Extending Flint
 
-🤝 Contributing
+New component types can be added by:
+1. Creating a template directory in `lib/src/templates/components/<type>/`
+2. Adding template files with appropriate naming (`<type>_template.dart`, etc.)
+3. Updating the CLI parser in `main.dart` to include the new component type flag
 
-Flint is open-source! If you’d like to contribute, submit a PR or open an issue on GitHub.
+## 🔮 Future Plans
 
-💡 Why Flint?
+- Support for more component types (forms, dialogs, etc.)
+- Complete application templates
+- Custom theme integration
+- State management scaffolding
 
-Indie developers juggle multiple tasks, and Flint helps by handling the boilerplate so you can focus on innovation. Get started and spark your next big project! 🔥
+## 🤝 Contributing
 
-Made with ❤️ for Flutter devs.
+Flint is open-source and under active development. Contributions, feedback, and feature requests are welcome!
+
+Made with ❤️ for Flutter developers.
