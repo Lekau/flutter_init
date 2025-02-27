@@ -13,6 +13,31 @@ Flint helps Flutter developers accelerate their development by generating reusab
 - **Customizable Templates** – All generated components maintain a consistent structure with separate template and styles files
 - **Automatic File Naming** – Components are automatically named based on your input
 
+## 🗺️ Roadmap
+
+We have big plans for Flint! Here's what we're working on:
+
+### Short-term Goals
+- **More UI Components** – Adding form components, modals, navigation drawers, and app bars
+- **Theming Utilities** – Tools to quickly generate and apply custom themes
+
+### Medium-term Goals
+- **Project Starter Templates** – Full application scaffolding with different architecture patterns:
+  - BLoC / Cubit
+  - Provider
+  - Riverpod
+  - GetX
+- **Common Service Integrations** – Ready-to-use implementations for:
+  - Firebase Authentication
+  - Push Notifications
+  - Local Storage
+  - API Clients
+
+### Long-term Vision
+- **Plugin Ecosystem** – Allow community-contributed templates and components
+- **Visual Component Builder** – GUI for customizing components before generation
+- **Analytics and Monitoring** – Templates for implementing analytics and crash reporting
+
 ## 📦 Installation
 
 You can install Flint globally using Dart:
